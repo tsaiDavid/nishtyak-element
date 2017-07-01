@@ -1,0 +1,36 @@
+<link rel="import" href="../polymer/polymer-element.html">
+
+<dom-module id="nishtyak-element">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+    <h2>Hello [[prop1]]!</h2>
+  </template>
+
+  <script>
+    /**
+     * `nishtyak-element`
+     * Ништяк
+     *
+     * @customElement
+     * @polymer
+     * @demo demo/index.html
+     */
+    class NishtyakElement extends Polymer.Element {
+      static get is() { return 'nishtyak-element'; }
+      static get properties() {
+        return {
+          prop1: {
+            type: String,
+            value: 'nishtyak-element'
+          }
+        };
+      }
+    }
+
+    window.customElements.define(NishtyakElement.is, NishtyakElement);
+  </script>
+</dom-module>
